@@ -13,6 +13,7 @@ describe "Authentication" do
   end
   
   describe "with invalid information" do
+    before {visit signin_path}
     before{ click_button 'Sign in' }
     
     it {should have_selector('title',text: 'Sign in')}
